@@ -1,53 +1,66 @@
-import { blackA, green, mauve, violet } from "@radix-ui/colors";
+
 import { styled } from "@stitches/react";
 
 export const Button = styled("button", {
-    all: "unset",
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 4,
-    padding: "0 15px",
-    fontSize: 15,
-    paddingTop: 500 ,
-    lineHeight: 1,
-    fontWeight: 500,
-    height: 35,
-    cursor: "pointer",
-    transition: "all 100ms ease-out",
-    width: "100px",
-    minWidth: "100%",
-    backgroundColor: violet.violet2,
-
     variants: {
+
+        v1: {
+            media: {
+                sm: '(min-width: 640px)',
+                md: '(min-width: 768px)',
+                lg: '(min-width: 1024px)',
+            },
+        },
+
+        color: {
+            primary: {
+                backgroundColor: ' #4895ff',
+            },
+            secondary: {
+                backgroundColor: ' #b3404a',
+            },
+            tertiary: {
+                backgroundColor: '#3bb54a',
+            },
+
+        },
+
         size: {
-            small: {
-                fontSize: 12,
-                padding: "0 10px",
-                lineHeight: "25px",
-                height: 25
+            sm: {
+                height: '30px',
+                width: '100%',
+            },
+            md: {
+                height: '40px',
+                width: '150%',
+
+            },
+            lg: {
+                height: '50px',
+                width: '200px',
             }
         },
-        variant: {
-            violet: {
-                backgroundColor: "white",
-                color: violet.violet11,
-                boxShadow: `0 2px 10px ${blackA.blackA7}`,
-                "&:hover": { backgroundColor: mauve.mauve3 },
-                "&:focus": { boxShadow: `0 0 0 2px black` }
+        speace: {
+            sp: {
+                padding: '10px',
+                margin: 'auto',
             },
-            green: {
-                backgroundColor: green.green2,
-                color: green.green11,
-                boxShadow: `inset 0 0 0 1px ${green.green7}`,
-                "&:hover": { boxShadow: `inset 0 0 0 1px ${green.green8}` },
-                "&:focus": { boxShadow: `0 0 0 2px ${green.green8}` }
-            }
-        }
-    },
+        },
 
-    defaultVariants: {
-        variant: "violet"
-    }
+        csx: {
+            styled: {
+                borderRadius: '5px',
+                color: 'white',
+                '&:hover': { backgroundColor: '#00BFFF' },
+                marginTop: '20px',
+                transition: 'all 0.2s ease-in-out',
+                boxShadow: 'none',
+                maxWidth: '100%',
+                margin: '1 auto',
+                padding: '1px',
+                fontWeight: 'bold',
+            },
+        },
+    },
 });;
 

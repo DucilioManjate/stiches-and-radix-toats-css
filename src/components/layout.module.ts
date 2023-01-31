@@ -61,6 +61,16 @@ export const Cardbody = styled('div', {
                 fontWeight: 'normal',
             },
         },
+        cardImage: {
+            position: {
+                float: 'right',
+                maxWidth: '64px',
+                maxHeight: '20px',
+                borderRadius: '40%',
+                
+            },
+        },
     },
 });
+
 
