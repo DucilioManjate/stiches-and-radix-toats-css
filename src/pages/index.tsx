@@ -12,9 +12,6 @@ export default function Home() {
       <Head>
         <title>Home</title>
       </Head>
-      <header>
-        Pagina inicial
-      </header>
       <Cardbody >
         <Layout />
       </Cardbody>

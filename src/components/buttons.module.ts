@@ -22,6 +22,9 @@ export const Button = styled("button", {
             tertiary: {
                 backgroundColor: '#3bb54a',
             },
+            quaternary: {
+                backgroundColor: '#6C7B8B',
+            },
 
         },
 
@@ -51,7 +54,7 @@ export const Button = styled("button", {
             styled: {
                 borderRadius: '5px',
                 color: 'white',
-                '&:hover': { backgroundColor: '#00BFFF' },
+                '&:hover': { backgroundColor: '#CAE1FF' },
                 marginTop: '20px',
                 transition: 'all 0.2s ease-in-out',
                 boxShadow: 'none',
@@ -63,4 +66,6 @@ export const Button = styled("button", {
         },
     },
 });;
+
+export const ButtonDark = styled("button", {});
 

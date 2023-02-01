@@ -1,10 +1,37 @@
 import { Button } from "@/components/buttons.module";
 import { Container } from "@/components/container.module";
+
 import { Cardbody } from "@/components/layout.module";
+import { useTheme } from "next-themes";
 
 export default function Layout() {
+    const { theme, setTheme } = useTheme();
+    const handleColorChange = () =>
+        setTheme(theme === "light" ? "dark" : "light");
+
     return (
         <>
+
+            <Container container={"v1"}>
+                <Container V2={"nav"}>
+                    <Container ul={"li"}>
+                        <li>Home</li>
+                        <li>Contato</li>
+                        <li>Equipe</li>
+                        <li>Projetos</li>
+                        <li>Blog</li>
+                        <li>Portifolio</li>
+                        <Button
+                            color={"quaternary"}
+                            size={"sm"}
+                            csx={"styled"}
+                            onClick={handleColorChange}>
+                            Mudar tema
+                        </Button>
+
+                    </Container>
+                </Container>
+            </Container>
             <Container container="v1">
                 <Cardbody
                     container={"basic"}
@@ -18,7 +45,6 @@ export default function Layout() {
                     >
                         <Cardbody container={"basic"}
                             cardImage={"position"}>
-                            <img src="/https://png.pngtree.com/png-vector/20200329/ourlarge/pngtree-character-avatar-of-businessman-with-bg" alt="Logo" />
                         </Cardbody>
 
                         Equipe de RH
